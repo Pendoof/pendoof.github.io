@@ -24,7 +24,7 @@ const ProjectView: React.FC = () => {
 		);
 	}
 
-	const { images, links, title, description, longDescription, tags } = project;
+	const { images, links, title, longDescription, tags } = project;
 
 	const linkButtons: { label: string; href: string }[] = [];
 	if (links.github) linkButtons.push({ label: "GitHub", href: links.github });
