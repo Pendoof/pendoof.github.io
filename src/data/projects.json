@@ -1,0 +1,91 @@
+[
+    {
+        "id": "pengplayer",
+        "title": "PengPlayer",
+        "slug": "pengplayer",
+        "description": "Native Windows terminal-based Spotify player built in C++",
+        "longDescription": "PengPlayer is a native Windows terminal application for controlling Spotify playback, built from the ground up in C++. It implements the full Spotify Web API surface for playback control, queue management, and search, backed by a hand-rolled OAuth Authorization Code Flow for authentication. Under the hood, spotify::Auth and spotify::Api classes wrap HTTP requests via cpp-httplib and JSON parsing via nlohmann/json, while device discovery and state sync are handled through active polling.\n\nRather than relying on the Spotify Connect API alone, PengPlayer spawns and manages a librespot subprocess in zeroconf mode using the Windows CreateProcessW API, giving it a real playback device to control directly from the terminal. The project is built with MSVC and vcpkg for dependency management, and configuration is handled through a lightweight custom .env parser.\n\nPengPlayer started as an exploration of systems-level programming and audio API integration, and became a deeper dive into process management, OAuth flows, and building reliable abstractions over an external API without a heavy framework in the way.",
+        "tags": ["C++", "Spotify API", "librespot", "cpp-httplib"],
+        "links": {
+            "github": "https://github.com/Pendoof/peng-player",
+            "demo": "https://www.youtube.com/watch?v=PJT3e32lr74",
+            "live": null
+        },
+        "images": {
+            "thumbnail": "/projects/pengplayer/thumb.jpg",
+            "gallery": [
+                "/projects/pengplayer/gallery/1.png",
+                "/projects/pengplayer/gallery/2.png"
+            ]
+        }
+    },
+    {
+        "id": "shiphub",
+        "title": "ShipHub",
+        "slug": "shiphub",
+        "description": "Terminal-aesthetic web app for posting and discovering projects",
+        "longDescription": "ShipHub is a terminal-styled web app built with React and Supabase where users can post and discover projects they're shipping. Authentication runs through Supabase Auth, with usernames stored in user_metadata for lightweight profile handling without a separate users table. The app uses React Router for client-side navigation between browsing, posting, and profile views, with the component architecture built around reusable terminal-UI primitives — monospace typography, ASCII-style borders, and command-line-inspired interactions.\n\nBuilt as the final project for CodePath's WEB102 Intermediate Web Development fellowship, ShipHub focuses on translating a familiar terminal aesthetic into a usable, responsive interface while working through real-world auth flows and Postgres-backed data through Supabase.",
+        "tags": ["React", "Supabase", "React Router", "PostgreSQL"],
+        "links": {
+            "github": "https://github.com/Pendoof/ShipHub",
+            "demo": null,
+            "live": "https://pendoof-shiphub.netlify.app/"
+        },
+        "images": {
+            "thumbnail": "/projects/shiphub/thumb.png",
+            "gallery": [
+                "/projects/shiphub/gallery/1.png",
+                "/projects/shiphub/gallery/2.png",
+                "/projects/shiphub/gallery/3.png",
+                "/projects/shiphub/gallery/4.png"
+            ]
+        }
+    },
+    {
+        "id": "shelf-detector",
+        "title": "Library Shelf Sorter",
+        "slug": "shelf-detector",
+        "description": "Raspberry Pi robot that OCR-scans bookshelf labels to catch misfiled books",
+        "longDescription": "A Raspberry Pi-based robot built to speed up book sorting for librarians. A Pi Camera captures a shelf, and a custom OpenCV pipeline isolates the white label strips on each book spine within a defined region of interest before handing each cropped label off to Tesseract OCR for text extraction. The result is a left-to-right list of call numbers straight off the shelf.\n\nThose extracted call numbers are then parsed and compared in sequence to flag books that are out of order, so a librarian can jump straight to the misfiled spine instead of scanning the whole shelf by eye. Hardware control (camera capture, an I2C character LCD for status output, and GPIO-driven movement) is handled through gpiozero, Adafruit CircuitPython, and picamera2, with the whole flow — capture, OCR, sort-check — wired together in a single pipeline script.\n\nThe project involved tuning image thresholds and aspect-ratio filters to reliably isolate label regions under variable lighting, swapping OCR engines mid-project for better accuracy, and getting camera, LCD, and OCR code running reliably together on constrained Raspberry Pi hardware.",
+        "tags": ["Python", "OpenCV", "Tesseract OCR", "Raspberry Pi"],
+        "links": {
+            "github": "https://github.com/hoseony/EID101C_TTG",
+            "demo": null,
+            "live": null
+        },
+        "images": {
+            "thumbnail": "/projects/shelf-detector/thumb.jpg",
+            "gallery": [
+                "/projects/shelf-detector/gallery/1.png",
+                "/projects/shelf-detector/gallery/2.png",
+                "/projects/shelf-detector/gallery/3.png",
+                "/projects/shelf-detector/gallery/4.mp4",
+                "/projects/shelf-detector/gallery/5.mp4",
+                "/projects/shelf-detector/gallery/6.jpg",
+                "/projects/shelf-detector/gallery/7.png",
+                "/projects/shelf-detector/gallery/8.mp4"
+            ]
+        }
+    },
+    {
+        "id": "co2-emissions-manhattan",
+        "title": "CO2 Emissions in Manhattan",
+        "slug": "co2-emissions-manhattan",
+        "description": "Data viz poster mapping CO2 emission hotspots across Manhattan buildings",
+        "longDescription": "This project visualizes NYC's Local Law 84 Energy and Water Data Disclosure dataset to map carbon emissions across Manhattan at the building level. Using pandas, the raw dataset is cleaned and filtered — coercing malformed numeric fields, dropping records missing borough or geolocation data, and imputing missing electricity, water, and emissions values with column means to preserve dataset size without skewing outliers.\n\nThe centerpiece is a kernel density estimate (KDE) heatmap built with seaborn, plotting building coordinates weighted by net emissions to reveal geographic hotspots of carbon output across the borough. The analysis found Manhattan emitted over 10 million tons of CO2 in 2022 — comparable to Luxembourg's annual national emissions, and equivalent to roughly 450 million trees' worth of offset capacity. A supporting borough-level bar chart compares total electricity use, water use, and net emissions across all five boroughs, and a citywide KDE plot examines the distribution of building electricity use.\n\nThe project involved handling messy real-world municipal data (inconsistent 'Not Available' placeholders, bad rows, missing geolocation), translating tabular emissions data into a spatial heatmap, and packaging the findings into a designed poster that puts the scale of the numbers in context.",
+        "tags": ["Python", "pandas", "seaborn", "Data Visualization"],
+        "links": {
+            "github": "https://github.com/Pendoof/NYC-data-viz",
+            "demo": null,
+            "live": null
+        },
+        "images": {
+            "thumbnail": "/projects/co2-emissions-manhattan/thumb.png",
+            "gallery": [
+                "/projects/co2-emissions-manhattan/gallery/1.jpg",
+                "/projects/co2-emissions-manhattan/gallery/2.png",
+                "/projects/co2-emissions-manhattan/gallery/3.png"
+            ]
+        }
+    }
+]
