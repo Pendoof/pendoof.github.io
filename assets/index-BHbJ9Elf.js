@@ -41,7 +41,7 @@ The project involved handling messy real-world municipal data (inconsistent 'Not
 									`,children:e.description})]},e.slug))}),e===`Socials`&&(0,A.jsx)(`div`,{className:`flex flex-col gap-4`,children:o.map((e,t)=>(0,A.jsxs)(`a`,{href:e.url,target:`_blank`,rel:`noopener noreferrer`,style:{animation:`fadeSlideIn 300ms ease-out forwards`,animationDelay:`${t*40}ms`,opacity:0},className:`
 									text-3xl text-gray-200 transition-all duration-300
 									hover:text-white hover:scale-110 hover:translate-x-2
-								`,children:[`→ `,e.name]},e.name))}),e===`Certificates`&&(0,A.jsx)(`div`,{className:`flex flex-col gap-4`,children:s.map((e,t)=>(0,A.jsxs)(`a`,{href:e.path,target:`_blank`,rel:`noopener noreferrer`,style:{animation:`fadeSlideIn 300ms ease-out forwards`,animationDelay:`${t*40}ms`,opacity:0},className:`
+								`,children:[`→ `,e.name]},e.name))}),e===`Certificates`&&(0,A.jsx)(`div`,{className:`flex flex-col gap-4`,children:s.map((e,t)=>(0,A.jsxs)(`a`,{href:`/${e.path.replace(/^\//,``)}`,target:`_blank`,rel:`noopener noreferrer`,style:{animation:`fadeSlideIn 300ms ease-out forwards`,animationDelay:`${t*40}ms`,opacity:0},className:`
 									text-3xl text-gray-200 transition-all duration-300
 									hover:text-white hover:scale-110 hover:translate-x-2
 								`,children:[`→ `,e.name]},e.name))}),e===`Resume`&&(0,A.jsxs)(`div`,{className:`flex flex-col gap-4`,children:[(0,A.jsx)(`a`,{href:`/assets/DerekChen_Resume-CZBM3rsa.pdf`,target:`_blank`,rel:`noopener noreferrer`,style:{animation:`fadeSlideIn 300ms ease-out forwards`,animationDelay:`40ms`,opacity:0},className:`
