@@ -4,7 +4,6 @@ import type { Project, Social, Cert } from "../types.ts";
 import projects from "../data/projects.json";
 import socials from "../data/socials.json";
 import certs from "../data/certs.json";
-import resume from "../../public/DerekChen_Resume.pdf";
 
 const Menu: React.FC = () => {
     const [selected, setSelected] = useState<string>("");
@@ -139,7 +138,7 @@ const Menu: React.FC = () => {
                 {selected === "Resume" && (
                     <div className="flex flex-col gap-4">
                         <a
-                            href={resume}
+                            href={`${import.meta.env.BASE_URL}DerekChen_Resume.pdf`}
                             target="_blank"
                             rel="noopener noreferrer"
                             style={{
@@ -156,7 +155,7 @@ const Menu: React.FC = () => {
                         </a>
 
                         <a
-                            href="/resume.pdf"
+                            href={`${import.meta.env.BASE_URL}DerekChen_Resume.pdf`}
                             download
                             style={{
                                 animation: "fadeSlideIn 300ms ease-out forwards",

@@ -1,14 +1,14 @@
 [
 	{
 		"name": "All Star Code",
-		"path": "/public/certs/AllStarCode.pdf"
+		"path": "/certs/AllStarCode.pdf"
 	},
     {
 		"name": "Anthropic",
-		"path": "/public/certs/Claude Certifications.pdf"
+		"path": "/certs/Claude Certifications.pdf"
 	},
 	{
 		"name": "CodePath",
-		"path": "/public/certs/CodePath.pdf"
+		"path": "/certs/CodePath.pdf"
 	}
 ]
