@@ -6,5 +6,9 @@
     {
 		"name": "Anthropic",
 		"path": "/public/certs/Claude Certifications.pdf"
+	},
+	{
+		"name": "CodePath",
+		"path": "/public/certs/CodePath.pdf"
 	}
 ]
