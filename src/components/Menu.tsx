@@ -117,7 +117,7 @@ const Menu: React.FC = () => {
                         {certLinks.map((cert, i) => (
                             <a
                                 key={cert.name}
-                                href={cert.path}
+                                href={`${import.meta.env.BASE_URL}${cert.path.replace(/^\//, "")}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 style={{
